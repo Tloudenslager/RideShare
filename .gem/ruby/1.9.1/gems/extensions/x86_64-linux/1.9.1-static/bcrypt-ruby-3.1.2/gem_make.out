@@ -1,0 +1,17 @@
+/usr/local/ruby-1.9.3-p547/bin/ruby -r ./siteconf20141008-4747-1s4ukd9.rb extconf.rb 
+checking for ruby/util.h... yes
+creating Makefile
+
+make  clean
+
+make
+compiling crypt_gensalt.c
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+compiling wrapper.c
+compiling crypt.c
+linking shared-object bcrypt_ext.so
+
+make  install
+/usr/bin/install -c -m 0755 bcrypt_ext.so .gem.20141008-4747-gbeear
+installing default bcrypt_ext libraries

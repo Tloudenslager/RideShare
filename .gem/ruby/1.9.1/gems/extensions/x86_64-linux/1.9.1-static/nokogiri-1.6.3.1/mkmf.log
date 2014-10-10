@@ -1,0 +1,452 @@
+package configuration for libxml-2.0
+cflags: -I/usr/include/libxml2  
+ldflags: 
+libs: -lxml2  
+
+package configuration for libxslt
+cflags: -I/usr/include/libxml2  
+ldflags: 
+libs: -lxslt -lz -lm -lxml2  
+
+package configuration for libexslt
+cflags: -I/usr/include/libxml2  
+ldflags: 
+libs: -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2  
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -E -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2    conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+4: 
+5: #if LIBXML_VERSION < 20621
+6: #error libxml2 is too old
+7: #endif
+/* end */
+
+"gcc -E -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2    conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+4: 
+5: #if LIBXML_VERSION >= 20900
+6: #error libxml2 is too new
+7: #endif
+/* end */
+
+have_func: checking for xmlParseDoc() in libxml/parser.h... -------------------- yes
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxml/parser.h>
+ 4: 
+ 5: /*top*/
+ 6: int t() { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+/* end */
+
+--------------------
+
+have_func: checking for xsltParseStylesheetDoc() in libxslt/xslt.h... -------------------- yes
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:6: error: ‘xsltParseStylesheetDoc’ undeclared (first use in this function)
+conftest.c:6: error: (Each undeclared identifier is reported only once
+conftest.c:6: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxslt/xslt.h>
+ 4: 
+ 5: /*top*/
+ 6: int t() { void ((*volatile p)()); p = (void ((*)()))xsltParseStylesheetDoc; return 0; }
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+/* end */
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:6: warning: implicit declaration of function ‘xsltParseStylesheetDoc’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxslt/xslt.h>
+ 4: 
+ 5: /*top*/
+ 6: int t() { xsltParseStylesheetDoc(); return 0; }
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+/* end */
+
+--------------------
+
+have_func: checking for exsltFuncRegister() in libexslt/exslt.h... -------------------- yes
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libexslt/exslt.h>
+ 4: 
+ 5: /*top*/
+ 6: int t() { void ((*volatile p)()); p = (void ((*)()))exsltFuncRegister; return 0; }
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+/* end */
+
+--------------------
+
+have_func: checking for xmlHasFeature()... -------------------- yes
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: error: ‘xmlHasFeature’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))xmlHasFeature; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘xmlHasFeature’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { xmlHasFeature(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_func: checking for xmlFirstElementChild()... -------------------- yes
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: error: ‘xmlFirstElementChild’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))xmlFirstElementChild; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘xmlFirstElementChild’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { xmlFirstElementChild(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_func: checking for xmlRelaxNGSetParserStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: error: ‘xmlRelaxNGSetParserStructuredErrors’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))xmlRelaxNGSetParserStructuredErrors; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘xmlRelaxNGSetParserStructuredErrors’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { xmlRelaxNGSetParserStructuredErrors(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_func: checking for xmlRelaxNGSetParserStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: error: ‘xmlRelaxNGSetParserStructuredErrors’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))xmlRelaxNGSetParserStructuredErrors; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘xmlRelaxNGSetParserStructuredErrors’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { xmlRelaxNGSetParserStructuredErrors(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_func: checking for xmlRelaxNGSetValidStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: error: ‘xmlRelaxNGSetValidStructuredErrors’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))xmlRelaxNGSetValidStructuredErrors; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘xmlRelaxNGSetValidStructuredErrors’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { xmlRelaxNGSetValidStructuredErrors(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_func: checking for xmlSchemaSetValidStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: error: ‘xmlSchemaSetValidStructuredErrors’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))xmlSchemaSetValidStructuredErrors; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘xmlSchemaSetValidStructuredErrors’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { xmlSchemaSetValidStructuredErrors(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
+have_func: checking for xmlSchemaSetParserStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: error: ‘xmlSchemaSetParserStructuredErrors’ undeclared (first use in this function)
+conftest.c:4: error: (Each undeclared identifier is reported only once
+conftest.c:4: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { void ((*volatile p)()); p = (void ((*)()))xmlSchemaSetParserStructuredErrors; return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+"gcc -o conftest -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/x86_64-linux -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1/ruby/backward -I/usr/local/ruby-1.9.3-p547/include/ruby-1.9.1 -I.     -O3 -ggdb -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -I/usr/include/libxml2   -I/usr/include/libxml2   -I/usr/include/libxml2   conftest.c  -L. -L/usr/local/ruby-1.9.3-p547/lib -Wl,-R/usr/local/ruby-1.9.3-p547/lib -L.  -rdynamic -Wl,-export-dynamic        -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -Wl,-R -Wl,/usr/local/ruby-1.9.3-p547/lib -L/usr/local/ruby-1.9.3-p547/lib -lruby-static  -lxml2   -lxslt -lz -lm -lxml2   -lexslt -lxslt -lz -lm -lgcrypt -ldl -lgpg-error -lxml2   -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:4: warning: implicit declaration of function ‘xmlSchemaSetParserStructuredErrors’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: int t() { xmlSchemaSetParserStructuredErrors(); return 0; }
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+/* end */
+
+--------------------
+
