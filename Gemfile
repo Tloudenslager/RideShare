@@ -6,7 +6,7 @@ gem 'bootstrap-sass','3.2.0.2'
 gem 'bcrypt-ruby','3.1.2'
 gem 'faker'
 gem 'will_paginate'
-
+gem 'protected_attributes'
 
 # Setup development, test, and production environments
 group :development, :test do
